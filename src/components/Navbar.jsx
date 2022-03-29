@@ -7,7 +7,6 @@ export const Navbar = () => {
 
   const handleMenu = () => {
     setToggle(!toggle);
-    console.log("sacando el menu");
   };
 
   return (
@@ -15,22 +14,22 @@ export const Navbar = () => {
       <div className="left flex items-center">
         <div className="font-black text-3xl text-cyan-600 p-2">Ecommerce</div>
         <ul className="flex">
-          <li className="m-2 text-xl font-semibold text-gray-600 hover:bg-cyan-100 p-1 hover:text-stone-900  rounded-md">
+          <li className="m-2 text-xl font-semibold text-gray-600 hover:bg-slate-100 p-1   rounded-md">
             <a href="/">Todo</a>
           </li>
-          <li className="m-2 text-xl   font-semibold text-gray-600 hover:bg-cyan-100 p-1 hover:text-stone-900  rounded-md">
+          <li className="m-2 text-xl   font-semibold text-gray-600 hover:bg-slate-100 p-1   rounded-md">
             <a href="/">Ropa</a>
           </li>
-          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-cyan-100 p-1 hover:text-stone-900  rounded-md">
+          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-slate-100 p-1   rounded-md">
             <a href="/">Electrónica</a>
           </li>
-          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-cyan-100 p-1 hover:text-stone-900  rounded-md">
+          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-slate-100 p-1   rounded-md">
             <a href="/">Muebles</a>
           </li>
-          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-cyan-100 p-1 hover:text-stone-900  rounded-md">
+          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-slate-100 p-1   rounded-md">
             <a href="/">Juguetes</a>
           </li>
-          <li className="m-2 text-xl font-semibold text-gray-600 hover:bg-cyan-100 p-1 hover:text-stone-900  rounded-md">
+          <li className="m-2 text-xl font-semibold text-gray-600 hover:bg-slate-100 p-1   rounded-md">
             <a href="/">Otros</a>
           </li>
         </ul>
