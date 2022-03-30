@@ -10,7 +10,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="p-2 flex  justify-between h-12 shadow-lg relative w-full">
+    <div className="p-2 flex  justify-between h-18 shadow-lg relative w-full">
       <div className="left flex items-center">
         <div className="font-black text-3xl text-cyan-600 p-2">Ecommerce</div>
         <ul className="flex">
