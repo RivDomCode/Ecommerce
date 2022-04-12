@@ -1,5 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
+import { OrderItem } from "../components/OrderItem";
+import { XIcon } from "@heroicons/react/outline";
+import AppContext from "../context/AppContext";
 
-export const MyOrder = () => {
-  return <div>MyOrder</div>;
+export const MyOrder = ({ handleOrders }) => {
+  const { state } = useContext(AppContext);
+
+  const sumTotal = () => {
+    const reducer = (accumulator, currentValue) =>
+      accumulator + currentValue.price;
+
+    const sum = state.cart.reduce(reducer, 0);
+    console.log(sum);
+    return sum;
+  };
+
+  return (
+    <aside className="absolute top-12 right-2 bg-white shadow-xl p-4">
+      <XIcon
+        className=" h-6 w-6 text-cyan-600 cursor-pointer font-bold text-right"
+        onClick={handleOrders}
+      />
+      <p className="font-bold text-2xl uppercase text-center pb-2">My order</p>
+
+      {state.cart.map((product) => (
+        <OrderItem product={product} key={`order-${product.id}`} />
+      ))}
+
+      <p>
+        <span className="text-cyan-600 text-2xl uppercase p-2">Total</span>
+      </p>
+      <p className="text-black font-semibold text-2xl uppercase p-2">
+        ${sumTotal()}
+      </p>
+      <div className="flex justify-center">
+        <button className="bg-red-500 mb-4 font-bold tracking-wide uppercase mt-4 py-3 hover:bg-red-600 text-white text-xl flex justify-center align-middle p-1 w-1/2 rounded-lg shadow-lg">
+          Checkout
+        </button>
+      </div>
+    </aside>
+  );
 };

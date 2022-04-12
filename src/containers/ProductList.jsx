@@ -1,35 +1,16 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import { ProductItem } from "../components/ProductItem";
+import { useGetDataFromAPI } from "../hooks/useGetDataFromAPI";
 
 export const ProductList = () => {
-  //Save product Info
-  const [products, setProducts] = useState([]);
+  const url = "https://api.escuelajs.co/api/v1/products";
 
-  //get productData form API
-  const getDataFromAPI = async () => {
-    const url = "https://api.escuelajs.co/api/v1/products";
-    const resp = await fetch(url);
-    const data = await resp.json();
-    const objectData = data.map((object) => {
-      return {
-        id: object.id,
-        category: object.category.name,
-        image: object.category.image,
-        title: object.title,
-        price: object.price,
-        description: object.description,
-      };
-    });
-    setProducts(objectData);
-  };
+  const products = useGetDataFromAPI(url);
 
-  useEffect(() => {
-    getDataFromAPI();
-  }, []);
   return (
-    <div className="p-14 flex flex-wrap  justify-around">
+    <div className="p-14 flex flex-wrap  justify-around bg-slate-100">
       {products.map((product) => (
-        <ProductItem key={product.id} {...product} />
+        <ProductItem key={product.id} product={product} />
       ))}
     </div>
   );
