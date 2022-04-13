@@ -27,12 +27,16 @@ export const MyOrder = ({ handleOrders }) => {
         <OrderItem product={product} key={`order-${product.id}`} />
       ))}
 
-      <p>
-        <span className="text-cyan-600 text-2xl uppercase p-2">Total</span>
-      </p>
-      <p className="text-black font-semibold text-2xl uppercase p-2">
-        ${sumTotal()}
-      </p>
+      <div className="flex flex-col justify-center bg-slate-100 w-2/3 mx-auto rounded-lg mt-4 mb-4">
+        <span className="text-slate-500 font-semibold text-2xl uppercase p-2 mt-2 text-center">
+          Total
+        </span>
+
+        <p className="text-black font-semibold text-2xl uppercase p-2 text-center">
+          ${sumTotal()}
+        </p>
+      </div>
+
       <div className="flex justify-center">
         <button className="bg-red-500 mb-4 font-bold tracking-wide uppercase mt-4 py-3 hover:bg-red-600 text-white text-xl flex justify-center align-middle p-1 w-1/2 rounded-lg shadow-lg">
           Checkout
