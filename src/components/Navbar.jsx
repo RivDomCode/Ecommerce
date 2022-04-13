@@ -4,9 +4,11 @@ import { MyOrder } from "../containers/MyOrder";
 import AppContext from "../context/AppContext";
 import { NavMenu } from "./NavMenu";
 
-export const Navbar = () => {
+export const Navbar = ( {userData} ) => {
   const [toggle, setToggle] = useState(false);
   const [toggleMyOrders, setToggleMyOrders] = useState(false);
+
+  const { userName } = userData;
 
   const handleMenu = () => {
     setToggle(!toggle);
@@ -48,7 +50,7 @@ export const Navbar = () => {
           className=" cursor-pointer text-gray-700 text-xl"
           onClick={handleMenu}
         >
-          correo@registrado.com
+          {userName}
         </p>
         <ShoppingCartIcon
           className="h-6 w-6 text-cyan-60 cursor-pointer"

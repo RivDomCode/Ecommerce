@@ -8,7 +8,7 @@ export const useGetDataFromAPI = (url) => {
         const url = "https://api.escuelajs.co/api/v1/products";
         const resp = await fetch(url);
         const data = await resp.json();
-        console.log(data);
+
         const objectData = data.map((object) => {
             return {
                 id: object.id,

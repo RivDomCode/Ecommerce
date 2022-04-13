@@ -1,10 +1,15 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   //target the form to get user data from inputs using FormData
   const form = useRef(null);
 
   //function to get data from input as an object with formdata
+
+  const [data, setData] = useState({
+
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +18,7 @@ export const Login = () => {
       userName: formData.get("email"),
       password: formData.get("password"),
     };
-    console.log(data);
+    setData(data);
   };
 
   return (
@@ -55,7 +60,11 @@ export const Login = () => {
             className="bg-cyan-600 hover:bg-cyan-700 cursor-pointer text-white text-xl font-semibold uppercase w-3/6 p-2 mx-auto border-slate-400 rounded-lg shadow-lg"
             onClick={handleSubmit}
           >
+            <Link to="/" state = {{data: data}}>
             Log in
+
+            </Link>
+
           </button>
         </form>
       </div>

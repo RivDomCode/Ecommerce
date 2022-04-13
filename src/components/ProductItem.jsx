@@ -8,7 +8,7 @@ export const ProductItem = ({ product, id }) => {
   const handleClick = (item) => {
     addToCart(item);
   };
-  console.log(product);
+
   return (
     <div className=" w-80 p-2 mb-8 shadow-lg rounded-xl bg-white ">
       <img src={product.image} alt="product-img" className="rounded-xl" />
