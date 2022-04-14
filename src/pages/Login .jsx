@@ -24,7 +24,6 @@ export const Login = () => {
     };
     setData(data2);
     const { userName, password } = data2;
-    console.log(data2);
     //simple validation
     if(userName === "" || password=== ""){
       setError(true);
@@ -35,14 +34,6 @@ export const Login = () => {
     navigate("main",{state: {userName}} );
 
   };
-
-
-
-
-
-
-
-
 
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-slate-100">

@@ -8,17 +8,9 @@ export const Main = () => {
 
   const location = useLocation();
 
-  console.log(location );
-
   const { state  } = location;
 
   const { userName } = state;
-
-  console.log(userName );
-
-
-
-
 
   return (
     <div>

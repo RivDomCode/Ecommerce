@@ -4,14 +4,14 @@ import { XIcon } from "@heroicons/react/outline";
 import AppContext from "../context/AppContext";
 
 export const MyOrder = ({ handleOrders }) => {
-  const { state } = useContext(AppContext);
+  const { state2 } = useContext(AppContext);
 
   const sumTotal = () => {
     const reducer = (accumulator, currentValue) =>
       accumulator + currentValue.price;
 
-    const sum = state.cart.reduce(reducer, 0);
-    console.log(sum);
+    const sum = state2.cart.reduce(reducer, 0);
+
     return sum;
   };
 
@@ -23,7 +23,7 @@ export const MyOrder = ({ handleOrders }) => {
       />
       <p className="font-bold text-2xl uppercase text-center pb-2">My order</p>
 
-      {state.cart.map((product) => (
+      {state2.cart.map((product) => (
         <OrderItem product={product} key={`order-${product.id}`} />
       ))}
 
