@@ -4,13 +4,13 @@ import { MyOrder } from "../containers/MyOrder";
 import AppContext from "../context/AppContext";
 import { NavMenu } from "./NavMenu";
 
-export const Navbar = ( {userData}) => {
+export const Navbar = ( {userName} ) => {
   const [toggle, setToggle] = useState(false);
   const [toggleMyOrders, setToggleMyOrders] = useState(false);
 
 
 
-const { userName } = userData;
+
 
   const handleMenu = () => {
     setToggle(!toggle);
@@ -20,7 +20,7 @@ const { userName } = userData;
     setToggleMyOrders(!toggleMyOrders);
   };
 
-  const { state } = useContext(AppContext);
+  const { state2 } = useContext(AppContext);
 
   return (
     <div className="p-2 flex  justify-between h-18 shadow-lg relative w-full">
@@ -52,15 +52,15 @@ const { userName } = userData;
           className=" cursor-pointer text-gray-700 text-xl"
           onClick={handleMenu}
         >
-          {userName}
+{userName}
         </p>
         <ShoppingCartIcon
           className="h-6 w-6 text-cyan-60 cursor-pointer"
           onClick={handleOrders}
         />
         <div className="bg-cyan-200 text-gray-700 rounded-full grid place-items-center  h-6 w-6">
-          {state.cart.length > 0 && (
-            <div className="font-semibold">{state.cart.length}</div>
+          {state2.cart.length > 0 && (
+            <div className="font-semibold">{state2.cart.length}</div>
           )}
         </div>
       </div>

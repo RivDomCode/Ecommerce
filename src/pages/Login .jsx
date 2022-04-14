@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Error } from "../components/Error";
 
 export const Login = () => {
@@ -13,7 +13,7 @@ export const Login = () => {
 
 //To throw an error if any field is no completed
   const [error, setError] = useState(false);
-
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ export const Login = () => {
     };
     setData(data2);
     const { userName, password } = data2;
-    console.log(userName);
+    console.log(data2);
     //simple validation
     if(userName === "" || password=== ""){
       setError(true);
@@ -32,6 +32,7 @@ export const Login = () => {
     }
 
     setError(false)
+    navigate("main",{state: {userName}} );
 
   };
 
@@ -46,7 +47,7 @@ export const Login = () => {
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-slate-100">
       <div className="form h-4/6 flex align-middle flex-col">
-        <p className="p-2 mb-12">No registration necessary! Just type an username </p>
+        <p className="p-4 mb-12 bg-white rounded-lg shadow-lg font-semibold tracking-wider">No registration necessary! Just type an username and a password</p>
         <form
           action="/"
           className="form flex flex-col mx-auto text-center w-96 bg-white rounded-lg shadow-lg h-full"
@@ -85,11 +86,7 @@ export const Login = () => {
             onClick={handleSubmit}
             >
 
-
-                  <Link to="/main" state = {{data: data}}>
-                  Log in
-  
-                  </Link>
+    Log in
 
 
 
