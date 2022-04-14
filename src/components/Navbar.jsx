@@ -4,11 +4,13 @@ import { MyOrder } from "../containers/MyOrder";
 import AppContext from "../context/AppContext";
 import { NavMenu } from "./NavMenu";
 
-export const Navbar = ( {userData} ) => {
+export const Navbar = ( {userData}) => {
   const [toggle, setToggle] = useState(false);
   const [toggleMyOrders, setToggleMyOrders] = useState(false);
 
-  const { userName } = userData;
+
+
+const { userName } = userData;
 
   const handleMenu = () => {
     setToggle(!toggle);
