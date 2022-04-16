@@ -1,22 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { LockClosedIcon, XIcon } from "@heroicons/react/outline";
 
-export const NavMenu = () => {
+
+
+export const NavMenu = ({setToggle}) => {
+
+  const handleClose = () => {
+    setToggle();
+  }
+
+
   return (
-    <div className="absolute top-12 right-2 bg-white shadow-xl p-4 ">
+    <div className="absolute rounded-lg top-16 right-14 text-slate-300 bg-slate-900 shadow-slate-300 p-4 ">
       <ul>
-        <li className="p-2 text-lg text-black hover:bg-slate-200 rounded-md">
-          <a href="/" className="title">
-            My orders
-          </a>
-        </li>
-        <li className="p-2 mb-2 text-lg text-black hover:bg-slate-200 rounded-md">
-          <a href="/">My account</a>
-        </li>
-        <hr />
-        <li className="p-2 text-lg font-semibold hover:bg-slate-200 rounded-md">
-          <a href="/">Sign out</a>
+      <XIcon
+        className=" h-6 w-6 text-orange-500 hover:text-orange-400 cursor-pointer font-bold text-right"
+        onClick={handleClose}
+      />
+
+        <li className="p-2 text-lg font-semibold tracking-wider  hover:text-slate-200 rounded-md">
+          <Link to="/" className="uppercase"><LockClosedIcon className="h-6 w-6 text-center mx-auto"/> Logout</Link>
         </li>
       </ul>
+      <hr />
     </div>
   );
 };
+

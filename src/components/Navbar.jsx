@@ -23,48 +23,29 @@ export const Navbar = ( {userName} ) => {
   const { state2 } = useContext(AppContext);
 
   return (
-    <div className="p-2 flex  justify-between h-18 shadow-lg relative w-full">
+    <div className="p-2 flex  justify-between rounded-b-lg h-36 shadow-lg relative bg-slate-900 w-full">
       <div className="left flex items-center">
-        <div className="font-black text-3xl text-cyan-600 p-2">Ecommerce</div>
-        <ul className="flex">
-          <li className="m-2 text-xl font-semibold text-gray-600 hover:bg-slate-100 p-1   rounded-md">
-            <a href="/">Todo</a>
-          </li>
-          <li className="m-2 text-xl   font-semibold text-gray-600 hover:bg-slate-100 p-1   rounded-md">
-            <a href="/">Ropa</a>
-          </li>
-          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-slate-100 p-1   rounded-md">
-            <a href="/">Electrónica</a>
-          </li>
-          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-slate-100 p-1   rounded-md">
-            <a href="/">Muebles</a>
-          </li>
-          <li className="m-2 text-xl font-semibold  text-gray-600 hover:bg-slate-100 p-1   rounded-md">
-            <a href="/">Juguetes</a>
-          </li>
-          <li className="m-2 text-xl font-semibold text-gray-600 hover:bg-slate-100 p-1   rounded-md">
-            <a href="/">Otros</a>
-          </li>
-        </ul>
+        <div className="font-black text-3xl  bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-100 p-2 tracking-wider uppercase">BuyIt</div>
+
       </div>
       <div className="right flex items-center justify-around">
         <p
-          className=" cursor-pointer text-gray-700 text-xl"
+          className=" cursor-pointer text-gray-300 text-xl uppercase"
           onClick={handleMenu}
         >
 {userName}
         </p>
         <ShoppingCartIcon
-          className="h-6 w-6 text-cyan-60 cursor-pointer"
+          className="h-6 w-6 text-cyan-60 cursor-pointer text-orange-500 mx-2"
           onClick={handleOrders}
         />
-        <div className="bg-cyan-200 text-gray-700 rounded-full grid place-items-center  h-6 w-6">
+        <div className="bg-orange-400 text-white rounded-full mr-2 grid place-items-center  h-6 w-6">
           {state2.cart.length > 0 && (
             <div className="font-semibold">{state2.cart.length}</div>
           )}
         </div>
       </div>
-      {toggle && <NavMenu />}
+      {toggle && <NavMenu setToggle={setToggle}/>}
       {toggleMyOrders && <MyOrder handleOrders={handleOrders} />}
     </div>
   );

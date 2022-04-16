@@ -41,7 +41,7 @@ export const Login = () => {
         <p className="p-4 mb-12 bg-white rounded-lg shadow-lg font-semibold tracking-wider">No registration necessary! Just type an username and a password</p>
         <form
           action="/"
-          className="form flex flex-col mx-auto text-center w-96 bg-white rounded-lg shadow-lg h-full"
+          className="form flex flex-col mx-auto text-center w-full bg-white rounded-lg shadow-lg h-full"
           ref={form}
         >
                     {error && <Error msg="All Fields are required!" />}
@@ -73,7 +73,7 @@ export const Login = () => {
 
           <button
             type="submit"
-            className="bg-cyan-600 relative hover:bg-cyan-700 cursor-pointer text-white text-xl font-semibold uppercase w-3/6 p-2 mx-auto border-slate-400 rounded-lg shadow-lg"
+            className="bg-cyan-600 relative hover:bg-cyan-700 cursor-pointer text-white text-xl font-semibold uppercase w-3/5 p-2 mx-auto border-slate-400 rounded-lg shadow-lg"
             onClick={handleSubmit}
             >
 
