@@ -10,9 +10,9 @@ export const ProductItem = ({ product, id }) => {
   };
 
   return (
-    <div className=" w-80 p-2 mb-8 shadow-lg rounded-xl bg-white ">
+    <div className=" w-96 mb-8 shadow-sm shadow-slate-600 rounded-xl bg-transparent text-slate-300 mx-1">
       <img src={product.image} alt="product-img" className="rounded-xl" />
-      <div className="px-3  ">
+      <div className="px-4  ">
         <div>
           <p className="text-slate-400 text-xl py-2 font-semibold mt-2 flex justify-between">
             ${product.price}{" "}
@@ -24,7 +24,7 @@ export const ProductItem = ({ product, id }) => {
         </div>
         <figure>{product.description}</figure>
         <button
-          className="bg-red-500 mb-4 font-bold tracking-wide uppercase mt-4 py-3 hover:bg-red-600 text-white text-xl flex justify-center align-middle p-1 w-full rounded-lg shadow-lg"
+          className=" bg-gradient-to-b from-orange-500 to-orange-400 mb-4 font-bold tracking-wide uppercase mt-4 py-3 hover:bg-orange-400 text-white text-xl flex justify-center align-middle p-1 w-full rounded-lg shadow-lg"
           onClick={() => handleClick(product)}
         >
           <PlusCircleIcon className="w-8 cursor-pointer text-white mr-2 " />

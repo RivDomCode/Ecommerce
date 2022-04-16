@@ -23,7 +23,7 @@ export const Navbar = ( {userName} ) => {
   const { state2 } = useContext(AppContext);
 
   return (
-    <div className="p-2 flex  justify-between rounded-b-lg h-36 shadow-lg relative bg-slate-900 w-full">
+    <div className="p-2 flex  justify-between  h-36 shadow-lg relative bg-slate-900 w-full">
       <div className="left flex items-center">
         <div className="font-black text-3xl  bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-100 p-2 tracking-wider uppercase">BuyIt</div>
 

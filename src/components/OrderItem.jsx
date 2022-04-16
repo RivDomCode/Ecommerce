@@ -10,14 +10,14 @@ export const OrderItem = ({ product }) => {
   };
 
   return (
-    <div className="flex w-96 justify-between p-1">
+    <div className="flex w-full justify-between p-1 mb-2">
       <img src={product.image} alt="bike" className="w-1/5 rounded-lg" />
       <p className="w-2/4 text-xl font-semibold ml-2">{product.title}</p>
       <p className="w-1/5 text-xl font-semibold text-slate-400">
         {product.price}
       </p>
       <XCircleIcon
-        className=" h-6 w-6 text-red-600 cursor-pointer font-bold text-right"
+        className=" h-6 w-6 text-orange-500 hover:scale-110 hover:text-orange-300 cursor-pointer font-bold text-right"
         onClick={() => handleRemove(product)}
       />
     </div>
