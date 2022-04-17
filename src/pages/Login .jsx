@@ -36,18 +36,19 @@ export const Login = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div className="w-screen h-screen flex flex-col items-center justify-center bg-slate-800 text-gray-300">
+                <div className="font-black text-5xl  bg-clip-text mb-8 text-transparent bg-gradient-to-r from-orange-500 to-orange-100 p-2 tracking-wider uppercase">BuyIt</div>
+
       <div className="form h-4/6 flex align-middle flex-col">
-        <p className="p-4 mb-12 bg-white rounded-lg shadow-lg font-semibold tracking-wider">No registration necessary! Just type an username and a password</p>
+        <p className="p-4 mb-12 bg-slate-900 rounded-lg shadow-lg font-semibold tracking-wider">No registration necessary! Just type an username and a password</p>
         <form
           action="/"
-          className="form flex flex-col mx-auto text-center w-full bg-white rounded-lg shadow-lg h-full"
+          className="form flex flex-col mx-auto text-center w-full p-8 bg-slate-900 rounded-lg shadow-lg h-full"
           ref={form}
         >
                     {error && <Error msg="All Fields are required!" />}
-          <div className="text-3xl text-center text-cyan-600 uppercase font-bold mb-4 p-4">
-            Login
-          </div>
+
+
           <div className="flex flex-col w-4/5 mx-auto p-8">
             <label htmlFor="email" className="font-bold uppercase">
               USERNAME
@@ -73,7 +74,7 @@ export const Login = () => {
 
           <button
             type="submit"
-            className="bg-cyan-600 relative hover:bg-cyan-700 cursor-pointer text-white text-xl font-semibold uppercase w-3/5 p-2 mx-auto border-slate-400 rounded-lg shadow-lg"
+            className="bg-orange-500 relative hover:bg-orange-400 mt-4 cursor-pointer text-white text-xl font-semibold uppercase w-3/5 p-2 mx-auto border-slate-400 rounded-lg shadow-lg"
             onClick={handleSubmit}
             >
 
