@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { Footer } from "../components/Footer";
 
 import { Navbar } from "../components/Navbar";
 import { ProductList } from "../containers/ProductList";
@@ -13,9 +14,10 @@ export const Main = () => {
   const { userName } = state;
 
   return (
-    <div>
+    <div >
       <Navbar userName={userName}/>
-      <ProductList/>
+      <ProductList />
+      <Footer/>
     </div>
   );
 };
