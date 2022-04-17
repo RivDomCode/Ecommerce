@@ -27,6 +27,9 @@ export const Login = () => {
     //simple validation
     if(userName === "" || password=== ""){
       setError(true);
+      setTimeout(()=>{
+        setError(false)
+      }, 5000)
       return
     }
 
@@ -57,7 +60,7 @@ export const Login = () => {
               type="text"
               name="user"
               placeholder="your username here..."
-              className=" text-center h-12 rounded-lg shadow-lg p-4 mt-4 bg-slate-100"
+              className=" text-center h-12 rounded-lg shadow-lg p-4 mt-4 bg-slate-100 text-xl font-semibold text-black"
             />
           </div>
           <div className="flex flex-col w-4/5 mx-auto p-8">
@@ -68,7 +71,7 @@ export const Login = () => {
               type="password"
               name="password"
               placeholder="Password"
-              className="text-center  w-full h-12 rounded-lg shadow-lg p-4 mt-4 bg-slate-100"
+              className="text-center  w-full h-12 rounded-lg shadow-lg p-4 mt-4 bg-slate-100 text-xl font-semibold text-black"
             />
           </div>
 
