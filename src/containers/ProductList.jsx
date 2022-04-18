@@ -8,7 +8,7 @@ export const ProductList = () => {
   const products = useGetDataFromAPI(url);
 
   return (
-    <div className="p-10 flex flex-wrap flex-col w justify-around bg-slate-800 xl:px-52 2xl:px-80 h-screen">
+    <div className="p-10 flex flex-wrap flex-col w-full justify-around bg-slate-800 xl:px-52 2xl:px-80 ">
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}

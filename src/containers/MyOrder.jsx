@@ -16,7 +16,7 @@ export const MyOrder = ({ handleOrders }) => {
   };
 
   return (
-    <aside className="absolute top-0 right-0 bg-slate-900 text-slate-300 rounded-lg shadow-xl p-4 w-1/2">
+    <aside className="absolute top-0 right-0 bg-slate-900 text-slate-300 rounded-lg shadow-xl p-4 w-1/2 z-10">
       <XIcon
         className=" h-6 w-6 text-orange-500 hover:scale-110 hover:text-orange-300 cursor-pointer font-bold text-right"
         onClick={handleOrders}

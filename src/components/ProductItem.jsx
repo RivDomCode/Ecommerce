@@ -10,7 +10,7 @@ export const ProductItem = ({ product, id }) => {
   };
 
   return (
-    <div className=" w-full h-full mb-12 flex shadow-sm  shadow-slate-600 rounded-xl bg-transparent text-slate-300 mx-1">
+    <div className=" w-full h-96 mb-12 flex shadow-sm  shadow-slate-600 rounded-xl bg-transparent text-slate-300 mx-1">
       <img src={product.image} alt="product-img" className=" rounded-xl h-96 w-1/3 " />
       <div className="px-4  relative">
         <div>
