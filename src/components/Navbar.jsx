@@ -25,7 +25,7 @@ export const Navbar = ( {userName} ) => {
   return (
     <div className="p-2 flex  justify-between  h-36 shadow-lg relative bg-slate-900 w-full">
       <div className="left flex items-center">
-        <div className="font-black text-3xl  bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-100 p-2 tracking-wider uppercase">BuyIt</div>
+        <div className="font-black text-3xl flex bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-100 p-2 tracking-wider uppercase">BuyIt</div>
 
       </div>
       <div className="right flex items-center justify-around">
