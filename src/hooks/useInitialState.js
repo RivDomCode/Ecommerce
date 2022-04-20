@@ -23,6 +23,8 @@ const useInitialState = () => {
         })
     }
 
+
+
     return { state2, addToCart, removeFromCart }
 
 }

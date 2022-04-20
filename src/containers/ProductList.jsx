@@ -3,9 +3,8 @@ import { ProductItem } from "../components/ProductItem";
 import { useGetDataFromAPI } from "../hooks/useGetDataFromAPI";
 
 export const ProductList = () => {
-  const url = "https://api.escuelajs.co/api/v1/products";
 
-  const products = useGetDataFromAPI(url);
+  const products = useGetDataFromAPI();
 
   return (
     <div className="p-10 flex flex-wrap flex-col w-full justify-around bg-slate-800 xl:px-52 2xl:px-80 ">
