@@ -1,4 +1,4 @@
-import { ShoppingCartIcon, SearchIcon } from "@heroicons/react/outline";
+import { ShoppingCartIcon } from "@heroicons/react/outline";
 import { useState, useContext } from "react";
 import { MyOrder } from "../containers/MyOrder";
 import AppContext from "../context/AppContext";
@@ -24,10 +24,7 @@ export const Navbar = ( {userName} ) => {
         <div className="font-black text-3xl flex bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-100 p-2 tracking-wider uppercase ml-6">BuyIt</div>
 
       </div>
-      <div className=" flex items-center" >
-        <input type="text" placeholder="Search..." className="text-center  w-full h-12 rounded-lg shadow-lg p-2 mt-4 bg-slate-100 text-xl font-semibold text-black" />
-        <button type="submit"><SearchIcon className="h-10 w-10 text-cyan-60 cursor-pointer text-orange-500 mt-4 ml-4"/> </button>
-      </div>
+
       <div className="right flex items-center justify-around">
         <p
           className=" cursor-pointer text-gray-300 text-2xl uppercase"
