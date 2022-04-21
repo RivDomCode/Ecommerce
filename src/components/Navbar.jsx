@@ -3,7 +3,6 @@ import { useState, useContext } from "react";
 import { MyOrder } from "../containers/MyOrder";
 import AppContext from "../context/AppContext";
 import { NavMenu } from "./NavMenu";
-
 export const Navbar = ( {userName} ) => {
   const [toggle, setToggle] = useState(false);
   const [toggleMyOrders, setToggleMyOrders] = useState(false);
