@@ -9,7 +9,6 @@ export const ProductList = () => {
 
   const handleChange = (e) => {
     setSearchValue(e.target.value);
-    console.log(searchValue)
   }
 
   const products = useGetDataFromAPI();

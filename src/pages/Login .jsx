@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Error } from "../components/Error";
+import { Footer } from "../components/Footer";
 
 export const Login = () => {
   //target the form to get user data from inputs using FormData
@@ -39,11 +40,11 @@ export const Login = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center bg-slate-800 text-gray-300">
+    <div className="w-screen relative h-screen flex flex-col items-center justify-center bg-slate-800 text-gray-300">
                 <div className="font-black text-5xl  bg-clip-text mb-8 text-transparent bg-gradient-to-r from-orange-500 to-orange-100 p-2 tracking-wider uppercase">BuyIt</div>
 
       <div className="form h-4/6 flex align-middle flex-col">
-        <p className="p-4 mb-12 bg-slate-900 rounded-lg shadow-lg font-semibold tracking-wider">No registration necessary! Just type an username and a password</p>
+        <p className="p-4 mb-12 bg-slate-900 rounded-lg shadow-lg font-semibold tracking-wider text-xl">No registration necessary! To Log In Just type an username and a password</p>
         <form
           action="/"
           className="form flex flex-col mx-auto text-center w-full p-8 bg-slate-900 rounded-lg shadow-lg h-full"
@@ -88,6 +89,10 @@ export const Login = () => {
           </button>
 
         </form>
+      </div>
+      <div className="absolute mt-8 bottom-0 w-full">
+      <Footer />
+
       </div>
     </div>
   );
